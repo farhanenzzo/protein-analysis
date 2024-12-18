@@ -10,7 +10,7 @@ export function useProteins() {
   useEffect(() => {
     async function loadProteins() {
       try {
-        const response = await fetch('/protein-data.json');
+        const response = await fetch(`${import.meta.env.BASE_URL}/protein-data.json`);
         if (!response.ok) {
           throw new Error('Failed to load protein data');
         }
